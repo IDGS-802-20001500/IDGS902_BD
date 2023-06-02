@@ -9,15 +9,17 @@ namespace IDGS902_BD.Models
     public class Alumnos
     {
         public int Id { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Nombre { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Apellidos { get; set; }
-        [StringLength(100)]
-        public string Correo {get; set; }
-        [StringLength(100)]
 
+        [StringLength(100)]
+        public string Correo { get; set; }
+    
     }
 }

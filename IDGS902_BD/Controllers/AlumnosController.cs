@@ -21,5 +21,32 @@ namespace IDGS902_BD.Controllers
             }
             
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Alumnos alum)
+        {
+            using (AlumnosDBContext dbAlumnos = new AlumnosDBContext())
+            {
+                dbAlumnos.Alumnos.Add(alum);
+                dbAlumnos.SaveChanges();
+
+
+
+
+            }
+            return RedirectToAction("Index");
+
+
+
+        }
+
+
+
+
     }
 }
